@@ -1,2 +1,36 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar GLFW",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "main.cpp",
+        "-I", "C:/GLFW/include",  // Caminho para a pasta "include"
+        "-L", "C:/GLFW/lib",  // Caminho para a pasta "lib"
+        "-lglfw3",  // Linkando GLFW
+        "-lopengl32",  // OpenGL
+        "-lgdi32",  // GDI
+        "-o", "glfw.exe"  // Nome do arquivo de saída
+      ],
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "detail": "Compilando com GLFW"
+    },
+    {
+      "label": "Copiar GLFW DLL",
+      "type": "shell",
+      "command": "copy",
+      "args": [
+        "C:/GLFW/bin/glfw3.dll",  // Caminho da DLL do GLFW
+        "glfw.exe"  // Diretório do executável
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Copiando a DLL do GLFW"
+    }
+  ]
+}
