@@ -32,7 +32,8 @@
 ## Comandos do corepad
 
 # Usar Core_comands(); para ver os comandos do corepad
-def ler_e_converter_binario(arquivo):
+
+ def ler_e_converter_binario(arquivo):
     try:
         with open(arquivo, 'rb') as f:
             conteudo = f.read()  # Lê o conteúdo do arquivo binário
@@ -59,4 +60,6 @@ def ler_e_converter_binario(arquivo):
 # Exemplo de uso
 arquivo_binario = 'exemplo.txt'  # Altere para o caminho do seu arquivo .txt ou outro
 resultado = ler_e_converter_binario(arquivo_binario)
-print(resultado)
+print(resultado)       
+        
+ 
