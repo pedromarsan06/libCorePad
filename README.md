@@ -32,3 +32,31 @@
 ## Comandos do corepad
 
 # Usar Core_comands(); para ver os comandos do corepad
+def ler_e_converter_binario(arquivo):
+    try:
+        with open(arquivo, 'rb') as f:
+            conteudo = f.read()  # Lê o conteúdo do arquivo binário
+        
+        texto_convertido = ""
+        
+        for byte in conteudo:
+            # Se o byte for imprimível (entre 32 e 126 no ASCII)
+            if 32 <= byte <= 126:
+                texto_convertido += chr(byte)
+            else:
+                # Para bytes não imprimíveis, colocamos um ponto
+                texto_convertido += '.'
+        
+        # Verifica se o conteúdo convertido é vazio, caso sim, retorna "Arquivo vazio ou não legível"
+        if not texto_convertido.strip():
+            return "Arquivo vazio ou não legível"
+        
+        return texto_convertido
+    
+    except Exception as e:
+        return f"Erro ao ler o arquivo: {e}"
+
+# Exemplo de uso
+arquivo_binario = 'exemplo.txt'  # Altere para o caminho do seu arquivo .txt ou outro
+resultado = ler_e_converter_binario(arquivo_binario)
+print(resultado)
