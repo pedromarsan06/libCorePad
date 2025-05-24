@@ -61,5 +61,5 @@
 arquivo_binario = 'exemplo.txt'  # Altere para o caminho do seu arquivo .txt ou outro
 resultado = ler_e_converter_binario(arquivo_binario)
 print(resultado)       
-        
+42PC7y9KX4uR7KwWpiHiA5iCFpRSQVu2bKqD1biFApbgTH25p643Spz2jGvyHLACCsXpvmPeeG6e8ft8BbzmaM9u9z9dAxP
  
